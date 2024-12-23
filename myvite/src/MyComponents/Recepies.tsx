@@ -58,7 +58,10 @@ getData();
                     <AvatarImage src={Veg} /> ) : ( <AvatarImage src={NonVeg} />)
 }
                   </Avatar>
-                <CardDescription><p className='text-gray-600' style={{fontFamily :"Philosopher,ital", fontWeight:"400"}}>{datas.isVeg ? "Veg" : "Non Veg"}</p></CardDescription>
+                  
+                <CardDescription><p className='text-gray-600' style={{fontFamily :"Philosopher,ital", fontWeight:"400"}}>{datas.isVeg ? "Veg" : "Non Veg"}</p>
+                <p className='text-xs text-gray-500 font-bold flex justify-center'>{datas.isBestSeller ? "Best Seller" : ''}</p></CardDescription>
+                
                 </div>
                 </div>
                 </section>
@@ -75,7 +78,9 @@ getData();
                 {datas.ratings}
               </Badge>
               </div>
+             
               </CardFooter>
+            
           </Card>
           </div>
         ))}
