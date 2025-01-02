@@ -35,7 +35,7 @@ let foodDetails = [
         image: "aloo_gobi.jpg", 
         isVeg: true, 
         isBestSeller:false,
-        ratings:4.7,
+        ratings:2.7,
         price: " 120.00", 
         description: "A comforting dish made with spiced potatoes and cauliflower, cooked with cumin, turmeric, and other aromatic spices." 
     },
@@ -125,7 +125,7 @@ let foodDetails = [
         image: "Mutton_Rogan_Josh.jpg", 
         isVeg: false, 
         isBestSeller:false,
-        ratings:2.9,
+        ratings:4.9,
         price: " 320.00", 
         description: "A slow-cooked mutton dish with a rich, flavorful gravy made from a blend of spices and yogurt, a signature Kashmiri dish." 
     },
