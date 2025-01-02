@@ -7,6 +7,7 @@ app.use(cors({
     origin:"http://localhost:5173",
     methods:"GET,POST,PUT,DELETE"
 }))
+const db=require('./connectdb')
 app.use(express.static(path.join(__dirname, 'Images'))); 
 let foodDetails = [
     { 
@@ -161,7 +162,16 @@ let foodDetails = [
     }
 ];
 
-
+db.connect(function(error){
+    const sql="CREATE TABLE dishes (Id int PRIMARY KEY AUTO_INCREMENT,name VARCHAR(100),image VARCHAR(100), isVeg BOOLEAN NOT NULL 0, price VARCHAR (50) ,description VARCHAR(200) )"
+    db.query(sql,(err,result)=>{
+        if(err){
+            console.log(err)
+        }else {
+            console.log('Table created successfully or already exists.');
+        }
+    })
+})
 
 app.get("/foodDetails",(req,res)=>{
     res.json(foodDetails);
